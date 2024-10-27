@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warcraft Rumble Boss Guides by Old Guardian</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #f1c40f;
+        }
+        .boss-section {
+            margin-bottom: 40px;
+        }
+        .video {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #1c1c1c;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+        .video img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .video-title {
+            font-size: 1.2em;
+            color: #f39c12;
+        }
+        .release-date {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        .video a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* Lightbox overlay styling */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .lightbox-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .lightbox-overlay .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .video {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .video img {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 0 10px 0;
+            }
+            .video-title, .release-date {
+                text-align: center;
+            }
+            .lightbox-overlay img {
+                max-width: 95%;
+                max-height: 80%;
+            }
+            .close-btn {
+                top: 15px;
+                right: 15px;
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Warcraft Rumble Boss Guides by Old Guardian</h1>
+
+    <!-- Lucifron Section -->
+    <div class="boss-section">
+        <h2>Lucifron</h2>
+        <div class="video">
+            <img src="lucifron_boss_guide_molten_core_raid.png" alt="Lucifron Guide" onclick="openLightbox('lucifron_boss_guide_molten_core_raid.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=foUVzrqw3E0">Lucifron Boss Guide - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: June 5, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="lucifron_boss_guide_unbound_strategy.png" alt="Lucifron Unbound Strategy Guide" onclick="openLightbox('lucifron_boss_guide_unbound_strategy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=ctWx4lM3eR8">Lucifron Boss Guide - Unbound Strategy - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: July 3, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Magmadar Section -->
+    <div class="boss-section">
+        <h2>Magmadar</h2>
+        <div class="video">
+            <img src="magmadar_boss_guide_after_nerfs.png" alt="Magmadar After Nerfs" onclick="openLightbox('magmadar_boss_guide_after_nerfs.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=vRDvAwQcqHQ">Magmadar Boss Guide - After Execute and Meat Wagon Nerfs - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: August 1, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="magmadar_boss_guide_meat_wagon_strategy.png" alt="Magmadar Meat Wagon Strategy" onclick="openLightbox('magmadar_boss_guide_meat_wagon_strategy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=7F8Y-uiyQ78">Magmadar Boss Guide - Meat Wagon Strategy - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: July 4, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="magmadar_boss_guide_molten_core_raid.png" alt="Magmadar Guide" onclick="openLightbox('magmadar_boss_guide_molten_core_raid.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=7F8Y-uiyQ78">Magmadar Boss Guide - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: June 5, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gehennas & Shazzrah Section -->
+    <div class="boss-section">
+        <h2>Gehennas & Shazzrah</h2>
+        <div class="video">
+            <img src="gehennas_shazzrah_boss_guide_molten_giant_strategy.png" alt="Gehennas & Shazzrah Molten Giant Strategy" onclick="openLightbox('gehennas_shazzrah_boss_guide_molten_giant_strategy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=zWP9_NtThzg">Gehennas & Shazzrah Boss Guide - Molten Giant Strategy - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: July 4, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="gehennas_shazzrah_boss_guide_molten_core_raid.png" alt="Gehennas & Shazzrah Guide" onclick="openLightbox('gehennas_shazzrah_boss_guide_molten_core_raid.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=sk4dcBtfIME">Gehennas & Shazzrah Boss Guide - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: June 6, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Garr Section -->
+    <div class="boss-section">
+        <h2>Garr</h2>
+        <div class="video">
+            <img src="garr_boss_guide_cheat_death_strategy.png" alt="Garr Cheat Death Strategy" onclick="openLightbox('garr_boss_guide_cheat_death_strategy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=CkvnojY25t4">Garr Boss Guide - Cheat Death Strategy - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: September 29, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="garr_boss_guide_drakkisath_cenarius.png" alt="Garr Drakkisath and Cenarius" onclick="openLightbox('garr_boss_guide_drakkisath_cenarius.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=n-xPgz50ROU">Garr Boss Guide - Drakkisath and Cenarius - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: July 5, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="garr_boss_guide_molten_core_raid.png" alt="Garr Guide" onclick="openLightbox('garr_boss_guide_molten_core_raid.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=CkvnojY25t4">Garr Boss Guide - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: June 7, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Baron Geddon Section -->
+    <div class="boss-section">
+        <h2>Baron Geddon</h2>
+        <div class="video">
+            <img src="buffed_baron_geddon_is_easy.png" alt="Buffed Baron Geddon is Easy" onclick="openLightbox('buffed_baron_geddon_is_easy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=u8YXyTpNQ-M">BUFFED Baron Geddon Is EASY! Molten Core Raid Boss Guide F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: September 30, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="world_record_buffed_baron_geddon_kill.png" alt="World Record Buffed Baron Geddon Kill" onclick="openLightbox('world_record_buffed_baron_geddon_kill.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=-DxwkKppZ2k">WORLD RECORD Buffed Baron Geddon Kill - Level 22.5 Average - Warcraft Rumble</a></div>
+                <div class="release-date">Released: August 4, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="buffed_baron_geddon_boss_guide.png" alt="Buffed Baron Geddon Guide" onclick="openLightbox('buffed_baron_geddon_boss_guide.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=PquaZmIR4Hc">BUFFED Baron Geddon Boss Guide - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: August 2, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="baron_geddon_boss_guide_gargoyle_strategy.png" alt="Baron Geddon Gargoyle Strategy" onclick="openLightbox('baron_geddon_boss_guide_gargoyle_strategy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=FBfqKc6m6uc">Baron Geddon Boss Guide - Gargoyle Strategy - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: July 7, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="baron_geddon_boss_guide_chimaera_level_20.png" alt="Baron Geddon Chimaera Strategy at Level 20" onclick="openLightbox('baron_geddon_boss_guide_chimaera_level_20.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=LhYKupg_Wvg">Baron Geddon Boss Guide - Chimaera Strategy at Level 20 - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: July 6, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="baron_geddon_boss_guide_chimaera_strategy.png" alt="Baron Geddon Chimaera Strategy" onclick="openLightbox('baron_geddon_boss_guide_chimaera_strategy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=dKEEMU6S3ro">Baron Geddon Boss Guide - Chimaera Strategy - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: June 9, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Golemagg Section -->
+    <div class="boss-section">
+        <h2>Golemagg</h2>
+        <div class="video">
+            <img src="buffed_golemagg_boss_guide.png" alt="Buffed Golemagg Guide" onclick="openLightbox('buffed_golemagg_boss_guide.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=IFT_efOzqv0">BUFFED Golemagg Boss Guide - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: August 3, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="golemagg_boss_guide_chimaera_level_20.png" alt="Golemagg Chimaera Strategy at Level 20" onclick="openLightbox('golemagg_boss_guide_chimaera_level_20.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=S03_HgDGHPA">Golemagg Boss Guide - Chimaera Strategy at Level 20 - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: July 7, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="golemagg_boss_guide_chimaera_strategy.png" alt="Golemagg Chimaera Strategy" onclick="openLightbox('golemagg_boss_guide_chimaera_strategy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=a-d0ItoJr0k">Golemagg Boss Guide - Chimaera Strategy - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: June 10, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ragnaros Section -->
+    <div class="boss-section">
+        <h2>Ragnaros</h2>
+        <div class="video">
+            <img src="defeat_ragnaros_arcane_blast.png" alt="Defeat Ragnaros with Arcane Blast" onclick="openLightbox('defeat_ragnaros_arcane_blast.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=j9wtN8vlC6w">Defeat Ragnaros with Arcane Blast! Molten Core Raid Guide - Warcraft Rumble</a></div>
+                <div class="release-date">Released: October 1, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="ragnaros_boss_guide_worgen_strategy.png" alt="Ragnaros Worgen Strategy" onclick="openLightbox('ragnaros_boss_guide_worgen_strategy.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=ViCUwPtP20w">No More Meat Wagons! Ragnaros Boss Guide - Worgen Strategy - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: September 27, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="crazy_low_level_buffed_ragnaros_kill.png" alt="Crazy Low-Level BUFFED RAGNAROS KILL" onclick="openLightbox('crazy_low_level_buffed_ragnaros_kill.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=tWLq0rEdMeY">Crazy Low-Level BUFFED RAGNAROS KILL - 23.0 Average - Boosted Meat Wagon Strategy - Warcraft Rumble</a></div>
+                <div class="release-date">Released: August 7, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="buffed_ragnaros_boss_guide.png" alt="Buffed Ragnaros Guide" onclick="openLightbox('buffed_ragnaros_boss_guide.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=RiDl5BQWSHk">BUFFED Ragnaros Boss Guide - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: August 6, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="ragnaros_boss_guide_no_epic_minis.png" alt="Ragnaros No Epic Minis" onclick="openLightbox('ragnaros_boss_guide_no_epic_minis.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=NgiP8Tn8xng">Ragnaros Boss Guide - No Epic Minis - Sneed and Jaina - Molten Core Raid F2P - Warcraft Rumble</a></div>
+                <div class="release-date">Released: July 8, 2024</div>
+            </div>
+        </div>
+        <div class="video">
+            <img src="ragnaros_boss_guide_molten_core_raid.png" alt="Ragnaros Guide" onclick="openLightbox('ragnaros_boss_guide_molten_core_raid.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=o3VghQZezP4">Ragnaros Boss Guide - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: June 15, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" src="" alt="Expanded view" onclick="closeLightbox()">
+    </div>
+
+    <script>
+        // Function to open the lightbox with the clicked image
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = imageSrc;
+            lightbox.style.display = 'flex';
+
+            // Close lightbox on Escape key press
+            document.addEventListener('keydown', handleEscapeClose);
+        }
+
+        // Function to close the lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+
+            // Remove Escape key event listener after closing
+            document.removeEventListener('keydown', handleEscapeClose);
+        }
+
+        // Function to close lightbox with Escape key
+        function handleEscapeClose(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        }
+    </script>
+</body>
+</html>
