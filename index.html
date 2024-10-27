@@ -47,6 +47,55 @@
             text-decoration: none;
         }
 
+        /* Deck Details Toggle Button */
+        .toggle-btn {
+            margin-top: 10px;
+            background-color: #f39c12;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        /* Deck Details Panel */
+        .deck-details {
+            display: none; /* Hidden by default */
+            margin-top: 10px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100%;
+        }
+        .deck-details h4 {
+            margin: 5px 0;
+            color: #f39c12;
+        }
+        .leader-talent {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        .deck-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .deck-details li {
+            color: #ccc;
+            margin-left: 15px;
+        }
+        .mini-name {
+            font-weight: bold;
+        }
+        .mini-talent {
+            font-size: 0.9em;
+            color: #aaa;
+            font-style: italic;
+            margin-left: 5px;
+        }
+
         /* Lightbox overlay styling */
         .lightbox-overlay {
             position: fixed;
@@ -115,6 +164,30 @@
             <div>
                 <div class="video-title"><a href="https://www.youtube.com/watch?v=foUVzrqw3E0" target="_blank">Lucifron Boss Guide - Molten Core Raid - Warcraft Rumble</a></div>
                 <div class="release-date">Released: June 5, 2024</div>
+                            <!-- Deck Details Toggle Button and Panel -->
+                <button class="toggle-btn" onclick="toggleDeckDetails(this)">Deck Details</button>
+                <div class="deck-details">
+                    <h4>Leader 1: Maiev Shadowsong</h4>
+                    <div class="leader-talent">Talent: Remorseless</div>
+                    <ul>
+                        <li><span class="mini-name">S.A.F.E. Pilot</span><span class="mini-talent">Gnomish Cloaking Device</span></li>
+                        <li><span class="mini-name">Worgen</span><span class="mini-talent">Premeditation</span></li>
+                        <li><span class="mini-name">Whelp Eggs</span><span class="mini-talent">Flame Burst</span></li>
+                        <li><span class="mini-name">Harpies</span><span class="mini-talent">Infectious Swipe</span></li>
+                        <li><span class="mini-name">Dark Iron Miner</span><span class="mini-talent">Gold Mine</span></li>
+                        <li><span class="mini-name">Skeleton Party</span></li>
+                    </ul>
+                    <h4>Leader 2: Maiev Shadowsong</h4>
+                    <div class="leader-talent">Talent: Remorseless</div>
+                    <ul>
+                        <li><span class="mini-name">Worgen</span><span class="mini-talent">Premeditation</span></li>
+                        <li><span class="mini-name">S.A.F.E. Pilot</span><span class="mini-talent">Gnomish Cloaking Device</span></li>
+                        <li><span class="mini-name">Whelp Eggs</span><span class="mini-talent">Flame Burst</span></li>
+                        <li><span class="mini-name">Banshee</span></li>
+                        <li><span class="mini-name">Skeleton Party</span></li>
+                        <li><span class="mini-name">Quilboar</span></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="video">
@@ -348,6 +421,18 @@
         function handleEscapeClose(event) {
             if (event.key === 'Escape') {
                 closeLightbox();
+            }
+        }
+
+        // Function to toggle deck details visibility
+        function toggleDeckDetails(button) {
+            const deckDetails = button.nextElementSibling;
+            if (deckDetails.style.display === "none" || !deckDetails.style.display) {
+                deckDetails.style.display = "block";
+                button.textContent = "Hide Deck Details";
+            } else {
+                deckDetails.style.display = "none";
+                button.textContent = "Deck Details";
             }
         }
     </script>

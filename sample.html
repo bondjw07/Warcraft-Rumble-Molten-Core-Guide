@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warcraft Rumble Boss Guides by Old Guardian</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #f1c40f;
+        }
+        .boss-section {
+            margin-bottom: 40px;
+        }
+        .video {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #1c1c1c;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+        .video img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .video-title {
+            font-size: 1.2em;
+            color: #f39c12;
+        }
+        .release-date {
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        .video a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        /* Deck Details Toggle Button */
+        .toggle-btn {
+            margin-top: 10px;
+            background-color: #f39c12;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        /* Deck Details Panel */
+        .deck-details {
+            display: none; /* Hidden by default */
+            margin-top: 10px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            width: 100%;
+        }
+        .deck-details h4 {
+            margin: 5px 0 0;
+            color: #f39c12;
+        }
+        .leader-talent {
+            font-size: 0.9em;
+            color: #ccc;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+        .deck-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .deck-details li {
+            color: #ccc;
+            margin-left: 15px;
+        }
+        .mini-name {
+            font-weight: bold;
+        }
+        .mini-talent {
+            font-size: 0.9em;
+            color: #aaa;
+            font-style: italic;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Warcraft Rumble Boss Guides by Old Guardian</h1>
+
+    <!-- Lucifron Section -->
+    <div class="boss-section">
+        <h2>Lucifron</h2>
+        <div class="video">
+            <img src="images/lucifron_boss_guide_molten_core_raid.png" alt="Lucifron Guide" onclick="openLightbox('lucifron_boss_guide_molten_core_raid.png')">
+            <div>
+                <div class="video-title"><a href="https://www.youtube.com/watch?v=foUVzrqw3E0" target="_blank">Lucifron Boss Guide - Molten Core Raid - Warcraft Rumble</a></div>
+                <div class="release-date">Released: June 5, 2024</div>
+            </div>
+
+            <!-- Deck Details Toggle Button and Panel -->
+            <button class="toggle-btn" onclick="toggleDeckDetails(this)">Deck Details</button>
+            <div class="deck-details">
+                <h4>Leader 1: Thrall</h4>
+                <div class="leader-talent">Talent: Storm's Fury</div>
+                <ul>
+                    <li><span class="mini-name">S.A.F.E. Pilot</span><span class="mini-talent">Gnomish Cloaking Device</span></li>
+                    <li><span class="mini-name">Worgen</span><span class="mini-talent">Premeditation</span></li>
+                    <li><span class="mini-name">Whelp Eggs</span><span class="mini-talent">Flame Burst</span></li>
+                    <li><span class="mini-name">Harpies</span><span class="mini-talent">Infectious Swipe</span></li>
+                    <li><span class="mini-name">Dark Iron Miner</span><span class="mini-talent">Gold Mine</span></li>
+                    <li><span class="mini-name">Skeleton Party</span></li>
+                </ul>
+                <h4>Leader 2: Jaina</h4>
+                <div class="leader-talent">Talent: Frost Armor</div>
+                <ul>
+                    <li><span class="mini-name">Frostbolt</span><span class="mini-talent">Shatter</span></li>
+                    <li><span class="mini-name">Water Elemental</span><span class="mini-talent">Ice Lance</span></li>
+                    <li><span class="mini-name">Blizzard</span><span class="mini-talent">Deep Freeze</span></li>
+                    <li><span class="mini-name">Cone of Cold</span><span class="mini-talent">Chilling Touch</span></li>
+                    <li><span class="mini-name">Frost Nova</span><span class="mini-talent">Frozen Impact</span></li>
+                    <li><span class="mini-name">Ice Barrier</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" src="" alt="Expanded view" onclick="closeLightbox()">
+    </div>
+
+    <script>
+        // Function to open the lightbox with the clicked image
+        function openLightbox(imageFileName) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            lightboxImage.src = 'images/' + imageFileName;
+            lightbox.style.display = 'flex';
+
+            // Close lightbox on Escape key press
+            document.addEventListener('keydown', handleEscapeClose);
+        }
+
+        // Function to close the lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+
+            // Remove Escape key event listener after closing
+            document.removeEventListener('keydown', handleEscapeClose);
+        }
+
+        // Function to close lightbox with Escape key
+        function handleEscapeClose(event) {
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+        }
+
+        // Function to toggle deck details visibility
+        function toggleDeckDetails(button) {
+            const deckDetails = button.nextElementSibling;
+            if (deckDetails.style.display === "none" || !deckDetails.style.display) {
+                deckDetails.style.display = "block";
+                button.textContent = "Hide Deck Details";
+            } else {
+                deckDetails.style.display = "none";
+                button.textContent = "Deck Details";
+            }
+        }
+    </script>
+</body>
+</html>
